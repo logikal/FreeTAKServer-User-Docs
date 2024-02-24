@@ -27,6 +27,7 @@ Please note the use of GHCR instead of dockerhub, and adjust accordingly.
 ### Installation Directory
 A directory in which to store configuration and database files is required. Please ensure the permissions for this directory
 allow container runtimes full `RWX` access recursively, and if using a selinux enabled OS, ensure the context is set for containers.
+
 For more information on this process, visit your OS provided documentation.
 
 ### Compose
@@ -68,4 +69,5 @@ From this point, please follow the Linux installation guide for information rega
 ## Persistent Data
 
 All persistent data is stored to /data and may be volume mounted.
-The host volume needs to be owned by user and group 1000.
+The `freetak` user is created by our Dockerfile, and is uid & gid `999`. There is no runtime configuration of user or group id.
+The host volume needs to be owned by user and group 999.

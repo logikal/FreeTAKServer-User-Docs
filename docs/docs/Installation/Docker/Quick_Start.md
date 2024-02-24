@@ -27,7 +27,6 @@ Please note the use of GHCR instead of dockerhub, and adjust accordingly.
 ### Installation Directory
 A directory in which to store configuration and database files is required. Please ensure the permissions for this directory
 allow container runtimes full `RWX` access recursively, and if using a selinux enabled OS, ensure the context is set for containers.
-
 For more information on this process, visit your OS provided documentation.
 
 ### Compose
